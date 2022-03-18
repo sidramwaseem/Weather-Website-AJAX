@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous"  referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Weather Website</title>
@@ -16,19 +17,33 @@
       </div>
     </nav>
 
-    <div class="jumbotron">
-      <h1 class="display-4">We know the Future!</h1>
-      <p class="lead"> We are the weather forecast system. Our experts check the information with the most modern satelite equipment and powerful servers. And they will give you the most accurate results.
-      </p>
-      <hr class="my-4" />
-      <p>
-        It uses utility classes for typography and spacing to space content out
-        within the larger container.
-      </p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
+    <div class="container  main-container">
+
+      <div class="row">
+
+        <div class="col-lg-6 jumbotron-col">
+          <div class="jumbotron">
+            <h1 class="display-4">We know the Future!</h1>
+            <p class="lead"> We are the weather forecast system. Our experts check the information with the most modern satelite 
+            equipment and powerful servers. And they will give you the most accurate results.
+            </p>
+            <hr class="my-4" />
+              
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">→</span>
+              <input id="searchInput" type="text" class="form-control" placeholder="City Name" aria-label="City Name" aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 result-col">
+          <div id="profile"></div>
+        </div>
+
+      </div>
+
     </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>

@@ -1,0 +1,18 @@
+.jumbotron{
+  background-color: #4e4aa9;
+  color: #fff;
+}
+
+.jumbotron-col{
+  border-top: 4px solid red;
+}
+
+.main-container{
+  margin: 30px auto;
+  border: 2px solid orange;
+}
+
+.result-col{
+  border: 2px solid green;
+  background: linear-gradient(110deg, #190061 60%, #000 60%);
+}
