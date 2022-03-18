@@ -1,4 +1,14 @@
 $(document).ready(function () {
+
+  var typed = new Typed('.typed', {
+    strings: ['the Future', 'The Weather', 'how will be your mood today'],
+    smartBackspace: true, // Default value
+    loop: true, // Default value
+    typeSpeed: 60, 
+    backSpeed: 50,
+    startDelay:10,
+  });
+
   $("#searchInput").on("keyup", function (e) {
     var cityName = e.target.value;
     var API = "c7a9e78687d4f87bb32878918bfd6a1e";
