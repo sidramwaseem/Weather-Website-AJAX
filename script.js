@@ -6,21 +6,27 @@ $(document).ready(function () {
     //Make the request to the server
 
     $.ajax({
-      url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API}`,
+      url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API}&units=metric`,
     }).done(function (weatherData) {
       console.log(weatherData);
 
       $("#profile").html(`
-           <div class="row">
-             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
+      <div class="container">
+      <div class="row">
+  <div class="card" style="width: 18rem;">
+     <img src="http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">Weather: ${weatherData.weather[0].description}</h5>
+       <h3>${cityName}</h3>
+      <p>Temperature: ${weatherData.main.temp}&#8451</p>
+      <p>Feels Like: ${weatherData.main.feels_like}&#8451</p>
+      <a target="_blank" href="https://www.google.com/search?q=${cityName}"
+      class="btn btn-primary">Learn More about this place</a>
+     </div>
+   </div>
+ </div>
+      
+      </div>
         `);
     });
   });

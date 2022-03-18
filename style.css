@@ -1,18 +1,43 @@
+body{
+  background-color: rgb(186, 186, 186);
+}
+
 .jumbotron{
+  border-radius: 12px;
   background-color: #4e4aa9;
   color: #fff;
 }
 
 .jumbotron-col{
-  border-top: 4px solid red;
+  width: 100%;
+  margin: 0;
+}
+
+.row div{
+  margin:0px auto;
+}
+
+.lead{
+  border-bottom: 2px solid #fff;
+  padding-bottom: 20px;
 }
 
 .main-container{
   margin: 30px auto;
-  border: 2px solid orange;
 }
 
 .result-col{
-  border: 2px solid green;
-  background: linear-gradient(110deg, #190061 60%, #000 60%);
+  background: linear-gradient(110deg, #4e4aa9 60%, #828282 60%);
+  border-radius:12px; 
+  padding:10px;
+}
+
+
+#profile .card{
+  margin: 5px auto;
+  background-color: #003049;
+  border: 2px solid #fff;
+  border-radius:16px;
+  color: #eee;
+
 }
